@@ -18,10 +18,32 @@ hcahps <- read.csv(here::here("data", "hcahps.csv")) %>%
   janitor::clean_names(case = "snake")
 
 # Extract coordinates
-hcahps %>% 
+hcahps <- hcahps %>% 
   mutate(coords = get_coordinates(location)) %>% 
   select(hospital_name, location, coords)
 
+hcahps %>% 
+  separate(coords, c("lat", "long"), ",")
+
 ## Debug Once
-debugonce(here::here)
-here::here("R", "utils.R")
+debugonce(tidyr::separate)
+hcahps %>% 
+  separate(coords, c("lat", "long"), ",")
+
+
+## Error Options
+options(error = browser)
+read.csv("data/nothing.csv")
+
+## Locating errors
+f <- function(a) g(a)
+g <- function(b) h(b)
+h <- function(c) i(c)
+i <- function(d) {
+  if (!is.numeric(d)) {
+    stop("`d` must be numeric", call. = FALSE)
+  }
+  d + 10
+}
+
+f("a")
