@@ -1,0 +1,8 @@
+[renv]
+Version=0.5.0-78
+
+[R]
+Version=3.6.1
+Repositories=
+	CRAN=https://cran.rstudio.com/
+
