@@ -30,11 +30,6 @@ debugonce(tidyr::separate)
 hcahps %>% 
   separate(coords, c("lat", "long"), ",")
 
-
-## Error Options
-options(error = browser)
-read.csv("data/nothing.csv")
-
 ## Locating errors
 f <- function(a) g(a)
 g <- function(b) h(b)
@@ -45,5 +40,10 @@ i <- function(d) {
   }
   d + 10
 }
+
+## Error Options
+options(error = recover)
+read.csv("data/nothing.csv")
+options(error = NULL)
 
 f("a")
