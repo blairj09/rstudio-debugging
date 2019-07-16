@@ -8,7 +8,8 @@ webinar highlights best practices for debugging R code in RStudio.
 
 The data used in this webinar comes from
 [opendata.utah.gov](https://opendata.utah.gov/Health/HCAHPS-Hospital-Ratings-For-Utah/a9vm-dqxv)
-and contains hospital ratings data for hospitals in Utah.
+and a list of Utah hospital ratings for the Hospital Consumer Assessment of
+Healthcare Providers and Systems (HCAHPS).
 
 ![](img/slide-screenshot.jpeg)
 
