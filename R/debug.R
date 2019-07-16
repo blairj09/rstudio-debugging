@@ -41,9 +41,11 @@ i <- function(d) {
   d + 10
 }
 
+f("a")
+
 ## Error Options
 options(error = recover)
-read.csv("data/nothing.csv")
+f("a")
 options(error = NULL)
 
-f("a")
+
